@@ -1,5 +1,5 @@
 # Phase 1 – Foundation
-ContePhase 1 – Foundation (พื้นฐาน Subsea)
+Phase 1 – Foundation (พื้นฐาน Subsea)
 เหมาะสำหรับ: คนใหม่, ฝึกงาน, ต่อยอดความเข้าใจระบบใหญ่
 
 1) ภาพรวมระบบ Subsea (System Overview)
