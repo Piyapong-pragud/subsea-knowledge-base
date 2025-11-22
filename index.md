@@ -1,6 +1,6 @@
 # Subsea Knowledge Base – Piyapong D.
 
-Welcome!
+"Welcome to the Subsea Engineering Knowledge Base."
 > This knowledge base compiles foundational, intermediate, and advanced concepts 
 > of submarine cable systems, covering optical transmission, PFE, grounding, 
 > DWDM, repeater chains, and network architecture for Submarine Cable operations.
@@ -28,4 +28,7 @@ Welcome!
 ---
 - [ Subsea Glossary A–Z](glossary.md)
   
-<img src="images/pg_vassel.jpg" width="300" height="auto">
+<p align="center">
+  <img src="images/pg_vassel.jpg" width="70%">
+</p>
+<br><br>
