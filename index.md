@@ -22,6 +22,11 @@
 
 ---
 
+### 🔵 Optical Transmission Systems
+- [Transponder & DWDM Transmission](transponder-transmission.md)
+
+---
+
 ### 🌐 Network Architecture
 - [End-to-End Transport Path](subseaendtoend.md)
 
