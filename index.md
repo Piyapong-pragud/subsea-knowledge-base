@@ -8,5 +8,6 @@ Welcome!
 - [Phase 3 – Advanced](phase3.md)
 - [Glossary](glossary.md)
 - [end-end](subseaendtoend.md)
+- [PFE Power Feeding – Sea Earth + Station Earth + SEF/BEF (Full Diagram)](sea-earth&station-earth.md)
 
 <img src="images/pg_vassel.jpg" width="300" height="auto">
