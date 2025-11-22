@@ -1,140 +1,166 @@
-# Phase 2 – Intermediate
-🟧 Phase 2 – Intermediate (ระดับปฏิบัติการ/วิศวกรภาคสนาม)
-เข้าใจเรื่องลึกขึ้น ใช้งานจริงใน CLS ได้เลย
+# 🟧 Phase 2 – Intermediate (ระดับปฏิบัติการ/วิศวกรภาคสนาม)
 
-A) PFE เชิงลึก (Advance Power Feeding)
-1) การคำนวณแรงดันและกระแส
-สูตรหลักของสายใต้น้ำ:
-V = I × R_total + margin
-I = กระแสคงที่ (0.8–1.5 A)
- R_total = ความต้านทานสาย (Ω/km × ระยะทาง)
- Margin = เพื่อชดเชย aging / temperature
-ตัวอย่าง APG:
-Current 1.0 A
+เข้าใจเชิงลึกมากขึ้น และสามารถนำไปใช้งานจริงใน CLS ได้
 
+---
 
-Resistance ~1.5 Ω/km
+# A) PFE เชิงลึก (Advanced Power Feeding)
 
+---
 
-ระยะ 300 km → R ≈ 450 Ω
+## 1) การคำนวณแรงดันและกระแส (Submarine Cable DC Feeding)
 
+สูตรพื้นฐานของระบบจ่ายไฟสายใต้น้ำ:
 
-Voltage ≈ 450 V + margin 100–200 V
+\[
+V = I \times R_{\text{total}} + \text{margin}
+\]
 
+- **I** = กระแสคงที่ (0.8–1.5 A)  
+- **R_total** = ความต้านทานรวม (Ω/km × ระยะทาง)  
+- **Margin** = aging, temperature, pump drift, repeaters loss  
 
-แต่ใช้ขั้ว ±1.5–±2 kV เพราะรวม repeater chain ยาวถึงพันกิโล
+### 🔸 ตัวอย่างจากระบบ APG
+- Current: **1.0 A**  
+- Resistance: **~1.5 Ω/km**  
+- ระยะ 300 km → R ≈ **450 Ω**  
+- Voltage ≈ **450 V + margin 100–200 V**  
 
-2) Fault Handling ขั้นสูง
-Ground Fault
-ตัวนำแตะน้ำทะเล
+แต่ระบบจริงใช้แรงดันระดับ  
+→ **±1.5 kV ถึง ±2 kV**  
+(เพราะรวม repeater chain ที่ยาวหลายพันกิโลเมตร)
 
+---
 
-Voltage leak → Earth current
+## 2) Fault Handling ขั้นสูงใน PFE
 
+---
 
-ต้องตรวจ IR (insulation resistance) จาก PFE
+### 🔥 Ground Fault
+- ตัวนำแตะน้ำทะเล → เกิด leakage  
+- มี **Earth current** ไหลกลับ  
+- ตรวจโดย:  
+  - Insulation Resistance (IR test)  
+  - สังเกต Earth current drift  
+  - Sectionalizing tests แยกฝั่ง  
 
+---
 
-แยกข้างเสียด้วย sectionalizing tests
+### 🔥 Current Imbalance
+- กระแสสองด้านของระบบ BEF ไม่เท่ากัน  
+- บอกได้ว่า:  
+  - BU เสีย  
+  - Repeater เสีย  
+  - Fault ที่ conductor  
+- ใช้ **PFE telemetry** ตรวจ real-time
 
+---
 
-Current Imbalance
-กระแสไม่เท่ากันสองข้างของ feed
+# B) Optical Transmission (DWDM, OSNR, Equalization)
 
+---
 
-บอกได้ถึงปัญหาใน BU หรือ repeater chain
+## 1) DWDM Channel Management
 
+สิ่งที่ต้องจัดการ:
 
-ใช้ PFE telemetry ติดตามค่า real-time
+- Channel spacing (50 GHz / 37.5 GHz / Flex-grid)  
+- Channel plan  
+- Launch power  
+- Per-channel attenuation  
+- Nonlinear limit  
+- Equalization  
 
+### 🔹 ตัวอย่าง – APG
+- Coherent 100G / 200G  
+- 37.5 GHz spacing  
+- OSNR target: **14–17 dB**
 
+### 🔹 ตัวอย่าง – CSN
+- บาง segment = 10G NRZ  
+- 50 GHz spacing  
+- OSNR target ~18–23 dB (NRZ ต้องการสูงกว่า)
 
-B) Optical Transmission (DWDM + OSNR)
-1) DWDM Channel Management
-จัดการ
-ช่องสัญญาณ (50/37.5 GHz spacing)
+---
 
+## 2) Gain Equalization & ASE Noise
 
-Channel plan
+### 🎯 เป้าหมาย: Flat Spectrum
 
+ปัญหาที่พบ:
 
-Launch power
+- EDFA ใต้น้ำมี **gain tilt**  
+- BU / ROADM / NFV เพิ่ม loss  
+- ASE noise จาก repeater chain เพิ่มตามระยะทาง  
 
+วิธีแก้:
 
-Per-channel attenuation
+- ใช้ **GFF** (Gain Flattening Filter)  
+- ปรับ per-channel ด้วย **WSS**  
+- คำนวณ chain budget ให้ OSNR ไม่เกิน threshold ของ modulation
 
+---
 
-Flex-grid (ถ้าเป็นระบบใหม่)
+## ⚡ ASE Noise (Amplified Spontaneous Emission)
 
+- เกิดใน EDFA ใต้น้ำทุกตัว  
+- เป็น noise หลักที่ทำให้ OSNR ตก  
+- ระยะยิ่งไกล → OSNR ยิ่งลดแบบ cumulative  
+- ต้องวิเคราะห์ร่วมกับ ripple / tilt / nonlinear margin
 
-ตัวอย่าง APG
-ใช้ coherent 100G/200G
+---
 
+# C) Fault Localization (การหาตำแหน่งขัดข้อง)
 
-37.5 GHz spacing
+---
 
+## 1) OTDR Trace แบบละเอียด (Long-range Subsea OTDR)
 
-OSNR target 14–17 dB
+สิ่งที่ต้องอ่านให้เป็น:
 
+- Event loss  
+- Splice loss  
+- Fiber attenuation  
+- Reflective events  
+- Dead zone  
+- Distance to fault  
 
-CSN
-บางช่วงยังเป็น 10G NRZ
+อุปกรณ์ที่ใช้ใน Subsea:
 
+- Dynamic range: **40–50 dB**  
+- Narrow pulse laser  
+- Long-range optimized mode
 
-ใช้ 50 GHz spacing
+---
 
+## 2) SLM (Submarine Line Monitoring)
 
+ระบบ Supervisory ใช้ตรวจ:
 
-2) Gain Equalization & ASE Noise
-เป้าหมายคือ Flat Spectrum
-EDFA ใต้น้ำมี Gain Tilt
+- Repeater status  
+- Pump performance  
+- BU state  
+- Earth leakage trend  
+- Aging & margin drift  
+- Fault trend ก่อน outage
 
+ทำงานผ่าน:
 
-BU/ROADM/NFV เพิ่ม Loss
+- Supervisory wavelength (OSC)  
+- Telemetry กลับเข้า CLS
 
+---
 
-ต้องใช้ GFF หรือ WSS ปรับสมดุล
+# 🎯 สรุป Phase 2
 
+Phase 2 = ความรู้ระดับปฏิบัติการจริงของระบบ Submarine Cable เช่น:
 
-ASE Noise
-มาจาก EDFA ทุกตัว
+- การเดินระบบ PFE  
+- การแยก Fault แบบเบื้องต้นถึงขั้นลึก  
+- DWDM / OSNR / Equalization  
+- OTDR / SLM  
+- Chain budget  
 
+เป็นหัวใจสำคัญของการดูแลระบบ APG, CSN และ International Trunks ทุกเส้นทาง
 
-ยิ่ง span มาก → OSNR ตก
-
-
-ต้องคำนวณ chain budget
-
-
-
-C) Fault Localization (หาตำแหน่งขัดข้อง)
-1) OTDR Trace แบบละเอียด
-ต้องอ่าน:
-Event loss
-
-
-Splice loss
-
-
-Fiber attenuation
-
-
-Reflections
-
-
-Dead zone
-
-
-Distance to fault
-
-
-OTDR สำหรับสายใต้น้ำใช้ Long-range (40–50 dB dynamic)
-2) SLM (Submarine Line Monitoring)
-ระบบ monitoring พิเศษ
-ใช้ supervisory wavelength
-
-
-อ่านสถานะ repeater, pump, BU
-
-
-ใช้ตรวจ aging / drift / margin
+---
