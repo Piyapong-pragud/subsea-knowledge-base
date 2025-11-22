@@ -66,6 +66,7 @@
 # โหมดการจ่ายไฟ (Feeding Modes)
 
 ## 1) SEF – Single-End Feed with Sea Return
+
                        (ฝั่ง A จ่ายไฟ, ฝั่ง B ใช้ Sea Return)
 
      PFE (+) A  --->  Conductor ---> Repeaters ---> ลงทะเลปลายทาง
@@ -76,6 +77,9 @@
 - กระแสกลับทางน้ำทะเล (sea return)
 - ใช้เมื่อฝั่ง B ไม่พร้อม / offline / maintenance
 - เหมาะกับสายสั้น–กลาง (เช่น CSN)
+
+## 2) BEF – Both-End Feed (ส่งไฟทั้งสองฝั่ง)
+
                      (ฝั่ง A และฝั่ง B จ่ายไฟเข้าหากัน)
 
       PFE(+) A --->------------------------------>
@@ -89,6 +93,8 @@
 - ลดแรงดันที่ปลายแต่ละด้าน (แบ่งโหลด)
 - ใช้กับสายยาวระดับระหว่างประเทศ เช่น APG
 - เพิ่ม redundancy: ถ้าฝั่งหนึ่งล่ม อีกฝั่งยัง feed ได้
+
+## 3) Earth-Free Mode (Reference-Free)
 
      PFE +HV และ -HV แยกจาก station earth ทั้งหมด
      feed circuit “ลอย” ไม่เกี่ยวกับ earth ใด ๆ
