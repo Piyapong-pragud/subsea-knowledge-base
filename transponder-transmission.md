@@ -22,7 +22,7 @@ Client Signal → Mapping → FEC → Modulation → LASER → DWDM → Fiber
 - **Client Interface:** 10G/100G/400G Ethernet, SDH/OTN  
 - **Line Interface:** Coherent 100G / 200G / 400G
 
-ตัวอย่างจริงของพี่ (APG/CSN):
+ตัวอย่าง (APG/CSN):
 - ASN SLTE  
 - Ciena/Alcatel 100G Coherent  
 - Huawei/Ciena 10G NRZ (กรณี legacy)  
