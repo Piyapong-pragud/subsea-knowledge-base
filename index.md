@@ -25,6 +25,15 @@
 ### 🔵 Optical Transmission Systems
 - [Transponder & DWDM Transmission](transponder-transmission.md)
 - [Optical Performance & Monitoring](optical-performance.md)
+- [Nonlinear Effects in Subsea Systems](nonlinear-effects.md)
+- [SLTE Vendor Deep Guide (ASN / NEC / SubCom / HMN)](vendor-slte-guide.md)
+- [Optical Budget & OSNR Calculators](optical-calculator.md)
+
+---
+
+### 🚢 Marine & Field Operations
+- [Marine Operations – Cable Ship Handbook](marine-operations.md)
+- [Field Operation Gallery](gallery.md)
 
 ---
 
@@ -40,6 +49,7 @@
 
 ### 🌐 Network Architecture
 - [End-to-End Transport Path](subseaendtoend.md)
+- [Traffic Engineering for Subsea Networks](traffic-engineering.md)
 
 ---
 
