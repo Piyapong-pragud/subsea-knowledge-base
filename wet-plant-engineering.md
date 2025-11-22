@@ -25,7 +25,7 @@
 <p align="center">
   <img src="images/cross-section.png" width="420">
 </p><br>
----
+
 
 # 2) Repeaters (EDFA ใต้น้ำ)
 
