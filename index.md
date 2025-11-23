@@ -3,6 +3,12 @@
 > A complete engineering guide for Submarine Cable Systems  
 > Wet Plant • Dry Plant • Optical Transmission • PFE • Grounding • Marine Ops • NOC • Fault Handling
 
+<input type="text" id="searchBox" placeholder="Search..." style="width: 50%; padding: 10px;">
+
+<ul id="results"></ul>
+
+<script src="search.js"></script>
+
 ---
 
 ## 📘 Knowledge Sections
