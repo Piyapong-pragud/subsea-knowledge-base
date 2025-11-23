@@ -22,7 +22,7 @@
 
 ## 🔵 Optical Transmission Systems
 - [Transponder & DWDM Transmission](transponder-transmission.md)
-- [Modulation Formats (QPSK / QAM)](modulation.md)
+- [Modulation Formats (QPSK / QAM)](modulation-theory.md)
 - [Constellation & Impairment Analysis](constellation-analysis.md)
 - [Coherent Signal Processing & DSP](coherent-processing.md)
 - [Optical Performance & Monitoring](optical-performance.md)
