@@ -56,6 +56,12 @@
 
 ---
 
+## 📝 Subsea Quizzes & Exercises
+- [Subsea Quiz – 40 Questions](quiz-subsea.md)
+- [Quiz Answers – 40 Solutions](quiz-subsea-answers.md)
+
+---
+
 ## 📙 Glossary
 - [Subsea Glossary A–Z](glossary.md)
 
