@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subsea Knowledge – Piyapong D.</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f6f7f9;
+      margin: 0;
+      padding: 0;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111317;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    header p {
+      margin-top: 10px;
+      opacity: 0.8;
+      font-size: 15px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 22px;
+      border-left: 6px solid #2e7df6;
+      padding-left: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 10px;
+    }
+
+    ul li {
+      padding: 4px 0;
+      font-size: 16px;
+    }
+
+    a {
+      color: #0066da;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .search-box {
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .search-box input {
+      width: 40%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .search-box button {
+      padding: 10px 15px;
+      margin-left: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      background: #2e7df6;
+      color: white;
+    }
+
+    #results {
+      margin-top: 10px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Image Section */
+    .img-center {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .img-center img {
+      width: 55%;
+      border-radius: 10px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+    }
+  </style>
+
+</head>
+<body>
+
+<header>
+  <h1>Subsea Knowledge – Piyapong D.</h1>
+  <p>A complete engineering guide for Submarine Cable Systems<br>
+     Wet Plant • Dry Plant • Optical Transmission • PFE • Grounding • Marine Ops • NOC • Fault Handling
+  </p>
+</header>
+
+<div class="container">
+
+  <!-- SEARCH BOX -->
+  <div class="search-box">
+    <input type="text" id="searchBox" placeholder="Search...">
+    <button id="searchButton">Search</button>
+    <ul id="results"></ul>
+  </div>
+
+  <!-- CONTENT SECTION -->
+  <h2>📘 Knowledge Sections</h2>
+  <ul>
+    <li><a href="phase1.md">Phase 1 – Foundation</a></li>
+    <li><a href="phase2.md">Phase 2 – Intermediate</a></li>
+    <li><a href="phase3.md">Phase 3 – Advanced</a></li>
+  </ul>
+
+  <h2>📗 PFE & Grounding Systems</h2>
+  <ul>
+    <li><a href="subsea-power-system.md">Subsea Power System Overview</a></li>
+    <li><a href="earth-systems.md">PFE – Feeding Modes & Earth Systems</a></li>
+    <li><a href="pfe-power-grounding.md">PFE – Fault & SLM Diagnostics</a></li>
+    <li><a href="pfe-power-theory.md">PFE Power Theory</a></li>
+  </ul>
+
+  <h2>🔵 Optical Transmission Systems</h2>
+  <ul>
+    <li><a href="optical-transmission.md">Optical Transmission Overview</a></li>
+    <li><a href="transponder-transmission.md">Transponder & DWDM Transmission</a></li>
+    <li><a href="modulation-theory.md">Modulation Formats (QPSK / QAM)</a></li>
+    <li><a href="coherent-constellation-guide.md">Constellation & Impairment Analysis</a></li>
+    <li><a href="coherent-transmission.md">Coherent Signal Processing & DSP</a></li>
+    <li><a href="optical-performance.md">Optical Performance & Monitoring</a></li>
+    <li><a href="nonlinear-effects.md">Nonlinear Effects in Subsea Systems</a></li>
+    <li><a href="vendor-slte-guide.md">SLTE Vendor Deep Guide (ASN / NEC / SubCom / HMN)</a></li>
+    <li><a href="optical-calculator.md">Optical Budget & OSNR Calculators</a></li>
+    <li><a href="wavelength.md">Wavelength & Spectral Engineering</a></li>
+  </ul>
+
+  <h2>🌊 Wet Plant Engineering</h2>
+  <ul>
+    <li><a href="wet-plant-engineering.md">Wet Plant – Repeater, BU, Cable Structure</a></li>
+  </ul>
+
+  <h2>🛠 Fault Casebook (Troubleshooting)</h2>
+  <ul>
+    <li><a href="fault-casebook.md">Casebook – Ground Fault, Pump Fail, BU Issues</a></li>
+  </ul>
+
+  <h2>🚢 Marine & Field Operations</h2>
+  <p>Practical knowledge for offshore repair, ROV operations, grapnel recovery, and cable-ship engineering.</p>
+  <ul>
+    <li><a href="marine-operations.md">Marine Operations – Cable Ship Handbook</a></li>
+    <li><a href="marine-repair-process.md">Marine Repair Process – Full Restoration Workflow</a></li>
+    <li><a href="electrode-tracking.md">Electrode Tracking – Ground Fault Localization</a></li>
+    <li><a href="grapnel-operations.md">Grapnel Operations – Cable Recovery Tools</a></li>
+    <li><a href="rov-operations.md">ROV Operations – Pickup, Burial & Post-Lay Inspection</a></li>
+    <li><a href="cable-engine-and-tension.md">Cable Engine & Tension Control</a></li>
+    <li><a href="gallery.md">Field Operation Gallery</a></li>
+  </ul>
+
+  <div class="img-center">
+    <img src="images/pg_vassel.jpg">
+  </div>
+
+  <h2>🌐 Network Architecture</h2>
+  <ul>
+    <li><a href="subseaendtoend.md">End-to-End Transport Path</a></li>
+    <li><a href="traffic-engineering.md">Traffic Engineering for Subsea Networks</a></li>
+  </ul>
+
+  <h2>📝 Subsea Quizzes & Exercises</h2>
+  <ul>
+    <li><a href="quiz-subsea.md">Subsea Quiz – 50 Questions</a></li>
+    <li><a href="quiz-subsea-answers.md">Quiz Answers – 50 Solutions</a></li>
+  </ul>
+
+  <h2>📙 Glossary</h2>
+  <ul>
+    <li><a href="glossary.md">Subsea Glossary A–Z</a></li>
+  </ul>
+
+</div>
+
+<footer>
+  © 2025 Subsea Knowledge – Maintained by Piyapong D.
+</footer>
+
+<script src="search.js"></script>
+
+</body>
+</html>
