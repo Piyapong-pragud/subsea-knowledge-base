@@ -62,16 +62,6 @@
 > Practical knowledge for offshore repair, ROV operations, grapnel recovery, and cable-ship engineering.
 
 - [Marine Operations – Cable Ship Handbook](marine-operations.md)
-- [Marine Repair Process – Full Restoration Workflow](marine-repair-process.md)
-- [Electrode Tracking – Ground Fault Localization](electrode-tracking.md)
-- [Grapnel Operations – Cable Recovery Tools](grapnel-operations.md)
-- [ROV Operations – Pickup, Burial & Post-Lay Inspection](rov-operations.md)
-- [Cable Engine & Tension Control](cable-engine-and-tension.md)
-- [Field Operation Gallery](gallery.md) 
-
-<p align="center">
-  <img src="images/pg_vassel.jpg" width="55%">
-</p>
 
 ---
 
